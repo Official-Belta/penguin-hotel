@@ -1,0 +1,22 @@
+{
+  "name": "penguin-hotel-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "남극 그랜드 호텔 — 펭귄 호텔 경영 게임 (web, PixiJS 2.5D iso)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "pixi.js": "^8.6.6"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vitest": "^2.1.8"
+  }
+}
