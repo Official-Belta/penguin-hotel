@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>남극 그랜드 호텔</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior: none;
+      }
+      #app {
+        position: fixed;
+        inset: 0;
+        /* 남극 밤 + 오로라 + 눈지평선. 빈 공간을 따뜻한 씬으로. */
+        background:
+          radial-gradient(140% 70% at 18% 8%, rgba(95, 227, 160, 0.22) 0%, rgba(95, 227, 160, 0) 42%),
+          radial-gradient(120% 60% at 82% 4%, rgba(122, 162, 255, 0.20) 0%, rgba(122, 162, 255, 0) 46%),
+          radial-gradient(160% 90% at 50% 116%, #cfe6ff 0%, #9cc4ef 16%, #2d5587 44%, #16315a 70%, #0c1d3a 100%);
+        background-color: #0c1d3a;
+      }
+      /* 잔별 — 상단 밤하늘 */
+      #app::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(1.5px 1.5px at 12% 14%, rgba(255,255,255,0.9) 50%, transparent 51%),
+          radial-gradient(1.2px 1.2px at 28% 9%, rgba(255,255,255,0.7) 50%, transparent 51%),
+          radial-gradient(1.4px 1.4px at 47% 18%, rgba(255,255,255,0.85) 50%, transparent 51%),
+          radial-gradient(1px 1px at 63% 7%, rgba(255,255,255,0.6) 50%, transparent 51%),
+          radial-gradient(1.6px 1.6px at 78% 16%, rgba(255,255,255,0.9) 50%, transparent 51%),
+          radial-gradient(1.1px 1.1px at 90% 11%, rgba(255,255,255,0.7) 50%, transparent 51%),
+          radial-gradient(1.3px 1.3px at 38% 24%, rgba(255,255,255,0.55) 50%, transparent 51%);
+        pointer-events: none;
+      }
+      #game-canvas {
+        position: absolute;
+        inset: 0;
+      }
+      #ui-root {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      #ui-root > * {
+        pointer-events: auto;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-YGNzkwbt.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-canvas"></div>
+      <div id="ui-root"></div>
+    </div>
+  </body>
+</html>
